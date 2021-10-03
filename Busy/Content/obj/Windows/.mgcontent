@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/GithubRepos/Busy/Busy/Content/Logos/rain.png</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/Logos/ripple.png</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/moduleHighlight.png</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/rain.png</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/selectionBar.png</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/selectionCursor.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
