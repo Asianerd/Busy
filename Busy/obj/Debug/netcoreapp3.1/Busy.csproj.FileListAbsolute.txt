@@ -41,3 +41,5 @@ D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\ripple.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\selectionBar.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\selectionCursor.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\moduleHighlight.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\ripple.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\lantern.xnb

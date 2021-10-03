@@ -51,13 +51,15 @@ public class Main : Game
 
         string _logoPath = "Logos";
         ModuleManager.LoadContent(new Dictionary<ModuleManager.ModuleType, ModuleManager.ModuleData>() {
-            { ModuleManager.ModuleType.Rain, new ModuleManager.ModuleData(new Color(0, 0, 0), Content.Load<Texture2D>($"{_logoPath}/rain")) },
+            { ModuleManager.ModuleType.Rain, new ModuleManager.ModuleData(new Color(0, 0, 50), Content.Load<Texture2D>($"{_logoPath}/rain")) },
             { ModuleManager.ModuleType.Ripple, new ModuleManager.ModuleData(new Color(100, 100, 100), Content.Load<Texture2D>($"{_logoPath}/ripple")) },
+            { ModuleManager.ModuleType.Lantern, new ModuleManager.ModuleData(new Color(0, 0, 50), Content.Load<Texture2D>($"{_logoPath}/lantern")) }
         });
         UI.LoadContent(Content.Load<Texture2D>("selectionBar"), Content.Load<Texture2D>("selectionCursor"), Content.Load<Texture2D>("moduleHighlight"));
 
         #region Module content loading
         Rain.LoadContent(Content.Load<Texture2D>("rain"));
+        Ripple.LoadContent(Content.Load<Texture2D>("ripple"));
         #endregion
     }
 

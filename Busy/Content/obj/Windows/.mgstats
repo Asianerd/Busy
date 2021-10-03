@@ -1,7 +1,9 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"D:/GithubRepos/Busy/Busy/Content/Logos/lantern.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/Logos/lantern.xnb","TextureProcessor","Texture2DContent",339,16469,0.1240006
 "D:/GithubRepos/Busy/Busy/Content/Logos/rain.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/Logos/rain.xnb","TextureProcessor","Texture2DContent",372,16469,0.2705077
 "D:/GithubRepos/Busy/Busy/Content/Logos/ripple.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/Logos/ripple.xnb","TextureProcessor","Texture2DContent",1024,16469,0.3605187
 "D:/GithubRepos/Busy/Busy/Content/moduleHighlight.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/moduleHighlight.xnb","TextureProcessor","Texture2DContent",220,16469,0.2652578
 "D:/GithubRepos/Busy/Busy/Content/rain.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/rain.xnb","TextureProcessor","Texture2DContent",81,89,0.3660024
+"D:/GithubRepos/Busy/Busy/Content/ripple.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/ripple.xnb","TextureProcessor","Texture2DContent",1535,262229,0.1250269
 "D:/GithubRepos/Busy/Busy/Content/selectionBar.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/selectionBar.xnb","TextureProcessor","Texture2DContent",2586,262229,0.1253105
 "D:/GithubRepos/Busy/Busy/Content/selectionCursor.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/selectionCursor.xnb","TextureProcessor","Texture2DContent",720,262229,0.0086302

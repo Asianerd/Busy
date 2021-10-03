@@ -66,19 +66,23 @@ class Rain
 
     Rain()
     {
-        Init();
+        Init(true);
     }
 
-    void Init()
+    void Init(bool trueInit = false)
     {
         position = new Vector2(
             Main.random.Next(0, Main.screen.Width),
-            Main.random.Next(0, 500) - 500
+            trueInit ? Main.random.Next(0, Main.screen.Height) : (Main.random.Next(0, 500) - 500)
             );
-        depth = Main.random.Next(12, 24);
+        depth = Main.random.Next(8, 24);
 
         float _c = depth / 24;
-        color = new Color(_c, _c, _c, 1);
+        color = new Color(
+            (100f * _c) / 100f,
+            (100f * _c) / 100f,
+            (200f * _c) / 200f,
+            1);
         size = new Vector2(1, (int)depth);
     }
 

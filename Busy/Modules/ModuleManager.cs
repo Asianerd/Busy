@@ -18,20 +18,21 @@ static class ModuleManager
     public static void Initialize()
     {
         moduleTypeCollection = Enum.GetValues(typeof(ModuleType)).Cast<ModuleType>().ToList();
-        activeModule = ModuleType.Rain;
+        activeModule = ModuleType.Ripple;
+        UpdateActiveModule();
 
         Main.UpdateEvent += Update;
         ActiveModuleChange += UpdateActiveModule;
 
         #region Module initialization
         Rain.Initialize();
+        Ripple.Initialize();
         #endregion
     }
 
     public static void LoadContent(Dictionary<ModuleType, ModuleData> _moduleData)
     {
         moduleDataCollection = _moduleData;
-        UpdateActiveModule();
     }
 
     static void UpdateActiveModule()
@@ -52,7 +53,10 @@ static class ModuleManager
                 Rain.Enable();
                 break;
             case ModuleType.Ripple:
-                
+                Ripple.Enable();
+                break;
+            case ModuleType.Lantern:
+                Lantern.Enable();
                 break;
         }
     }
@@ -80,6 +84,7 @@ static class ModuleManager
     {
         Rain,
         Ripple,
+        Lantern,
     }
 
     public class ModuleData

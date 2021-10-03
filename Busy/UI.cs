@@ -22,13 +22,11 @@ static class UI
         menuValue = new GameValue(0, 120, 10, 0);
 
         float increment = MathHelper.ToRadians(360 / ModuleManager.moduleTypeCollection.Count);
-        float distance = 200f;
         foreach (var item in ModuleManager.moduleTypeCollection.Select((value, i) => new { i, value }))
         {
             float degrees = increment * item.i;
 
             buttons.Add(item.value, new Button(ModuleManager.moduleDataCollection[item.value].logo, new Vector2(-500, -500)));
-            Debug.WriteLine($"{new Vector2(MathF.Cos(degrees) * distance,MathF.Sin(degrees) * distance)+ Main.screen.Center.ToVector2()}");
         }
     }
 
