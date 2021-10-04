@@ -43,3 +43,7 @@ D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\selectionCursor.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\moduleHighlight.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\ripple.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\lantern.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\firefly.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\firefly.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\darkOverlay.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\font.xnb

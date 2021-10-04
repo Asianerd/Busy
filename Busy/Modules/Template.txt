@@ -1,0 +1,83 @@
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
+
+class temporary_type
+{
+    #region Init, Content, Enable/Disable
+    public static void LoadContent(Texture2D _sprite)
+    {
+        sprite = _sprite;
+    }
+
+    public static void Initialize()
+    {
+        ModuleManager.ResetModules += Disable;
+    }
+
+    public static void Enable()
+    {
+        Main.ModuleUpdateEvent += StaticUpdate;
+        Main.ModuleDrawEvent += StaticDraw;
+        Start();
+    }
+
+    public static void Disable()
+    {
+        collection.Clear();
+    }
+
+    #region Start, Updates, Draws
+    public static List<temporary_type> collection = new List<temporary_type>();
+    public static Texture2D sprite;
+
+    static void Start()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            collection.Add(new temporary_type());
+        }
+    }
+
+    static void StaticUpdate()
+    {
+        foreach (temporary_type x in collection)
+        {
+            x.Update();
+        }
+    }
+
+    static void StaticDraw(SpriteBatch spriteBatch)
+    {
+        foreach (temporary_type x in collection)
+        {
+            x.Draw(spriteBatch);
+        }
+    }
+    #endregion
+    #endregion
+
+
+    #region Public
+    temporary_type()
+    {
+        Init(true);
+    }
+
+    void Init(bool trueinit = false)
+    {
+
+    }
+
+    void Update()
+    {
+
+    }
+
+    void Draw(SpriteBatch spriteBatch)
+    {
+
+    }
+    #endregion
+}

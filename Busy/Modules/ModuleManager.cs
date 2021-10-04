@@ -18,7 +18,7 @@ static class ModuleManager
     public static void Initialize()
     {
         moduleTypeCollection = Enum.GetValues(typeof(ModuleType)).Cast<ModuleType>().ToList();
-        activeModule = ModuleType.Ripple;
+        activeModule = ModuleType.Fireflies;
         UpdateActiveModule();
 
         Main.UpdateEvent += Update;
@@ -27,6 +27,8 @@ static class ModuleManager
         #region Module initialization
         Rain.Initialize();
         Ripple.Initialize();
+        Lantern.Initialize();
+        Firefly.Initialize();
         #endregion
     }
 
@@ -55,8 +57,11 @@ static class ModuleManager
             case ModuleType.Ripple:
                 Ripple.Enable();
                 break;
-            case ModuleType.Lantern:
+            /*case ModuleType.Lantern:
                 Lantern.Enable();
+                break;*/
+            case ModuleType.Fireflies:
+                Firefly.Enable();
                 break;
         }
     }
@@ -84,7 +89,8 @@ static class ModuleManager
     {
         Rain,
         Ripple,
-        Lantern,
+        /*Lantern,*/
+        Fireflies
     }
 
     public class ModuleData

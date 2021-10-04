@@ -1,6 +1,0 @@
-﻿using System;
-
-class Module
-{
-
-}

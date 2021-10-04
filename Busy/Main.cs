@@ -11,6 +11,7 @@ public class Main : Game
 
     public static Random random = new Random();
     public static Rectangle screen = new Rectangle(0, 0, 1920, 1080);
+    public static float FPS;
     public static Color backgroundColor;
     public static MouseState mouseState;
     public static Vector2 mousePosition;
@@ -52,14 +53,16 @@ public class Main : Game
         string _logoPath = "Logos";
         ModuleManager.LoadContent(new Dictionary<ModuleManager.ModuleType, ModuleManager.ModuleData>() {
             { ModuleManager.ModuleType.Rain, new ModuleManager.ModuleData(new Color(0, 0, 50), Content.Load<Texture2D>($"{_logoPath}/rain")) },
-            { ModuleManager.ModuleType.Ripple, new ModuleManager.ModuleData(new Color(100, 100, 100), Content.Load<Texture2D>($"{_logoPath}/ripple")) },
-            { ModuleManager.ModuleType.Lantern, new ModuleManager.ModuleData(new Color(0, 0, 50), Content.Load<Texture2D>($"{_logoPath}/lantern")) }
+            { ModuleManager.ModuleType.Ripple, new ModuleManager.ModuleData(new Color(20, 20, 60), Content.Load<Texture2D>($"{_logoPath}/ripple")) },
+            { ModuleManager.ModuleType.Fireflies, new ModuleManager.ModuleData(new Color(0, 0, 20), Content.Load<Texture2D>($"{_logoPath}/firefly")) },
+            //{ ModuleManager.ModuleType.Lantern, new ModuleManager.ModuleData(new Color(0, 0, 50), Content.Load<Texture2D>($"{_logoPath}/lantern")) }
         });
-        UI.LoadContent(Content.Load<Texture2D>("selectionBar"), Content.Load<Texture2D>("selectionCursor"), Content.Load<Texture2D>("moduleHighlight"));
+        UI.LoadContent(Content.Load<Texture2D>("selectionBar"), Content.Load<Texture2D>("selectionCursor"), Content.Load<Texture2D>("moduleHighlight"), Content.Load<Texture2D>("darkOverlay"), Content.Load<SpriteFont>("font"));
 
         #region Module content loading
         Rain.LoadContent(Content.Load<Texture2D>("rain"));
         Ripple.LoadContent(Content.Load<Texture2D>("ripple"));
+        Firefly.LoadContent(Content.Load<Texture2D>("firefly"));
         #endregion
     }
 
@@ -89,6 +92,8 @@ public class Main : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(backgroundColor);
+
+        FPS = 1f / (float)gameTime.ElapsedGameTime.TotalSeconds;
 
         _spriteBatch.Begin();
         if (ModuleDrawEvent != null)

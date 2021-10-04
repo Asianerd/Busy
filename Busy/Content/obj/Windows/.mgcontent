@@ -4,6 +4,10 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>D:/GithubRepos/Busy/Busy/Content/darkOverlay.png</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/firefly.png</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/font.spritefont</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/Logos/firefly.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/lantern.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/rain.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/ripple.png</File>
@@ -14,6 +18,10 @@
     <File>D:/GithubRepos/Busy/Busy/Content/selectionCursor.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
