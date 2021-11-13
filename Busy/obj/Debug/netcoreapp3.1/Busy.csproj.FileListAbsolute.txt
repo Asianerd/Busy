@@ -47,3 +47,7 @@ D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\firefly.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\firefly.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\darkOverlay.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\font.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\cursor.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\dvd.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\dvd.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\lantern.xnb

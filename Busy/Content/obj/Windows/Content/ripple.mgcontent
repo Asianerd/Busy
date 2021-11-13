@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>D:/GithubRepos/Busy/Busy/Content/ripple.png</SourceFile>
-  <SourceTime>2021-10-03T17:56:41.9091364+08:00</SourceTime>
+  <SourceTime>2021-11-14T04:04:58.402784+08:00</SourceTime>
   <DestFile>D:/GithubRepos/Busy/Busy/Content/bin/Windows/Content/ripple.xnb</DestFile>
-  <DestTime>2021-10-03T17:56:50.1173073+08:00</DestTime>
+  <DestTime>2021-11-14T04:05:01.626317+08:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
