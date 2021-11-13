@@ -1,71 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 class Button
 {
-    public static List<Button> buttons = new List<Button>();
-    public delegate void ButtonEvent();
-    public event ButtonEvent PressEvent;
+    public static List<Button> collection = new List<Button>();
 
-    public static Color neutralColor = Color.White;
-    public static Color pressedColor = Color.Gray;
+    public static Button F11;
+    public static Button Reset;
 
-    Rectangle rect;
-    Texture2D sprite;
-    Vector2 origin;
+    Keys key;
 
-    bool wasPressed;    // Pressed the previous frame
-    bool isPressed;     // Pressed the current frame
-    bool pressed;       // Pressed the current frame and mouse cursor is hovering
-    public bool active; // True only during the frame the button is pressed and mouse cursor is hovering
+    bool isPressed;
+    bool wasPressed;
+    public bool active;
 
-    public Button(Texture2D _sprite, Vector2 position)
+    public Button(Keys _key)
     {
-        sprite = _sprite;
-        origin = sprite.Bounds.Size.ToVector2() / 2;
-        rect = new Rectangle(position.ToPoint(), (Vector2.One * 64).ToPoint());
-        buttons.Add(this);
+        key = _key;
+        collection.Add(this);
     }
 
     public void Update()
     {
         wasPressed = isPressed;
-        isPressed = Main.mouseState.LeftButton == ButtonState.Pressed;
-        pressed = false;
-        active = false;
+        isPressed = Main.keyboardState.IsKeyDown(key);
 
-        if (rect.Contains(Main.cursor))
-        {
-            GetPressed();
-        }
+        active = !wasPressed && isPressed;
     }
 
-    public void GetPressed()
+    public static void Initalize()
     {
-        pressed = isPressed;
-        if (isPressed && !wasPressed)
-        {
-            active = true;
-            if (PressEvent != null)
-            {
-                PressEvent();
-            }
-        }
+        F11 = new Button(Keys.F11);
+        Reset = new Button(Keys.R);
     }
-
-    public void Draw(SpriteBatch spriteBatch, Vector2 position, float scale)
-    {
-        spriteBatch.Draw(sprite, position, null, pressed ? pressedColor : neutralColor, 0f, origin, scale, SpriteEffects.None, 0f);
-    }
-
-
-    #region Static
-    public static void Initialize()
-    {
-        
-    }
-    #endregion
 }
