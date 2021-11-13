@@ -8,7 +8,8 @@ using Microsoft.Xna.Framework.Input;
 
 static class UI
 {
-    public static Dictionary<ModuleManager.ModuleType, Button> buttons = new Dictionary<ModuleManager.ModuleType, Button>();
+    public static Dictionary<ModuleManager.ModuleType, MouseButton> buttons = new Dictionary<ModuleManager.ModuleType, MouseButton>();
+    static Texture2D cursor;
     static Texture2D radialSelectionBar;
     static Texture2D selectionCursor;
     static Texture2D selectedModule;
@@ -31,12 +32,13 @@ static class UI
         {
             float degrees = increment * item.i;
 
-            buttons.Add(item.value, new Button(ModuleManager.moduleDataCollection[item.value].logo, new Vector2(-500, -500)));
+            buttons.Add(item.value, new MouseButton(ModuleManager.moduleDataCollection[item.value].logo, new Vector2(-500, -500)));
         }
     }
 
-    public static void LoadContent(Texture2D _selectionBarSprite, Texture2D _selectionCursor, Texture2D _selectedModule, Texture2D _darkOverlay, SpriteFont _font)
+    public static void LoadContent(Texture2D _cursor, Texture2D _selectionBarSprite, Texture2D _selectionCursor, Texture2D _selectedModule, Texture2D _darkOverlay, SpriteFont _font)
     {
+        cursor = _cursor;
         radialSelectionBar = _selectionBarSprite;
         selectionCursor = _selectionCursor;
         selectedModule = _selectedModule;
@@ -49,7 +51,7 @@ static class UI
     {
         if (menuValue.Percent() == 1)
         {
-            foreach (Button x in buttons.Values)
+            foreach (MouseButton x in buttons.Values)
             {
                 x.Update();
             }
@@ -81,7 +83,8 @@ static class UI
             float scale = (float)menuValue.Percent();
             float radiansToMouse = (float)Math.Atan2(Main.mousePosition.Y - origin.Y, Main.mousePosition.X - origin.X);
             float distance = 200f * scale;
-            spriteBatch.Draw(darkOverlay, Main.screen, new Color(scale, scale, scale, scale));
+            Color _gradualTint = new Color(scale, scale, scale, scale);
+            spriteBatch.Draw(darkOverlay, Main.screen, _gradualTint);
             spriteBatch.Draw(radialSelectionBar, renderedPosition, null, Color.White, 0f, new Vector2(128, 128), scale, SpriteEffects.None, 0f);
             spriteBatch.Draw(selectionCursor, renderedPosition, null, Color.White, radiansToMouse, new Vector2(128, 128), scale, SpriteEffects.None, 0f);
 
@@ -109,6 +112,8 @@ static class UI
                     spriteBatch.Draw(selectedModule, renderedPosition, null, Color.White, 0f, Vector2.One * 32, scale + (selected ? 0.3f : 0.1f), SpriteEffects.None, 0f);
                 }
             }
+
+            spriteBatch.Draw(cursor, Main.mousePosition, null, _gradualTint, 0f, cursor.Bounds.Center.ToVector2(), scale, SpriteEffects.None, 1f);
         }
 
         if (showDebug)
