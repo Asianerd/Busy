@@ -18,7 +18,7 @@ static class ModuleManager
     public static void Initialize()
     {
         moduleTypeCollection = Enum.GetValues(typeof(ModuleType)).Cast<ModuleType>().ToList();
-        activeModule = ModuleType.Fireflies;
+        activeModule = ModuleType.Lantern;
         UpdateActiveModule();
 
         Main.UpdateEvent += Update;
@@ -29,6 +29,7 @@ static class ModuleManager
         Ripple.Initialize();
         Lantern.Initialize();
         Firefly.Initialize();
+        DVD.Initialize();
         #endregion
     }
 
@@ -37,7 +38,7 @@ static class ModuleManager
         moduleDataCollection = _moduleData;
     }
 
-    static void UpdateActiveModule()
+    public static void UpdateActiveModule()
     {
         Main.backgroundColor = moduleDataCollection[activeModule].backgroundColor;
 
@@ -57,11 +58,14 @@ static class ModuleManager
             case ModuleType.Ripple:
                 Ripple.Enable();
                 break;
-            /*case ModuleType.Lantern:
+            case ModuleType.Lantern:
                 Lantern.Enable();
-                break;*/
+                break;
             case ModuleType.Fireflies:
                 Firefly.Enable();
+                break;
+            case ModuleType.DVD:
+                DVD.Enable();
                 break;
         }
     }
@@ -89,8 +93,9 @@ static class ModuleManager
     {
         Rain,
         Ripple,
-        /*Lantern,*/
-        Fireflies
+        Lantern,
+        Fireflies,
+        DVD
     }
 
     public class ModuleData
