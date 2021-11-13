@@ -32,6 +32,12 @@ public class Main : Game
         _graphics.PreferredBackBufferWidth = screen.Width;
         _graphics.PreferredBackBufferHeight = screen.Height;
         _graphics.IsFullScreen = true;
+
+        InactiveSleepTime = new TimeSpan(0, 0, 0, 0, 0);
+
+        Window.AllowUserResizing = true;
+        Window.ClientSizeChanged += new EventHandler<EventArgs>(UpdateScreenSize);
+
         _graphics.ApplyChanges();
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
@@ -41,9 +47,12 @@ public class Main : Game
     {
         base.Initialize();
 
+        IsMouseVisible = false;
+
         ModuleManager.Initialize();
         UI.Initialize();
-        Button.Initialize();
+        MouseButton.Initialize();
+        Button.Initalize();
     }
 
     protected override void LoadContent()
@@ -55,14 +64,17 @@ public class Main : Game
             { ModuleManager.ModuleType.Rain, new ModuleManager.ModuleData(new Color(0, 0, 50), Content.Load<Texture2D>($"{_logoPath}/rain")) },
             { ModuleManager.ModuleType.Ripple, new ModuleManager.ModuleData(new Color(20, 20, 60), Content.Load<Texture2D>($"{_logoPath}/ripple")) },
             { ModuleManager.ModuleType.Fireflies, new ModuleManager.ModuleData(new Color(0, 0, 20), Content.Load<Texture2D>($"{_logoPath}/firefly")) },
-            //{ ModuleManager.ModuleType.Lantern, new ModuleManager.ModuleData(new Color(0, 0, 50), Content.Load<Texture2D>($"{_logoPath}/lantern")) }
+            { ModuleManager.ModuleType.Lantern, new ModuleManager.ModuleData(new Color(0, 0, 50), Content.Load<Texture2D>($"{_logoPath}/lantern")) },
+            { ModuleManager.ModuleType.DVD, new ModuleManager.ModuleData(new Color(0,0,0),Content.Load<Texture2D>($"{_logoPath}/dvd")) }
         });
-        UI.LoadContent(Content.Load<Texture2D>("selectionBar"), Content.Load<Texture2D>("selectionCursor"), Content.Load<Texture2D>("moduleHighlight"), Content.Load<Texture2D>("darkOverlay"), Content.Load<SpriteFont>("font"));
+        UI.LoadContent(Content.Load<Texture2D>("cursor"), Content.Load<Texture2D>("selectionBar"), Content.Load<Texture2D>("selectionCursor"), Content.Load<Texture2D>("moduleHighlight"), Content.Load<Texture2D>("darkOverlay"), Content.Load<SpriteFont>("font"));
 
         #region Module content loading
         Rain.LoadContent(Content.Load<Texture2D>("rain"));
         Ripple.LoadContent(Content.Load<Texture2D>("ripple"));
         Firefly.LoadContent(Content.Load<Texture2D>("firefly"));
+        Lantern.LoadContent(Content.Load<Texture2D>("lantern"));
+        DVD.LoadContent(Content.Load<Texture2D>("dvd"));
         #endregion
     }
 
@@ -71,11 +83,25 @@ public class Main : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
+        foreach (Button x in Button.collection)
+        {
+            x.Update();
+        }
 
         mouseState = Mouse.GetState();
         mousePosition = mouseState.Position.ToVector2();
         keyboardState = Keyboard.GetState();
         cursor = mouseState.Position;
+
+        if(Button.F11.active)
+        {
+            _graphics.ToggleFullScreen();
+        }
+
+        if(Button.Reset.active)
+        {
+            ModuleManager.UpdateActiveModule();
+        }
 
         if(UpdateEvent != null)
         {
@@ -107,5 +133,16 @@ public class Main : Game
         _spriteBatch.End();
 
         base.Draw(gameTime);
+    }
+
+    void UpdateScreenSize(object sender, EventArgs a)
+    {
+        _graphics.PreferredBackBufferWidth = Window.ClientBounds.Width;
+        _graphics.PreferredBackBufferHeight = Window.ClientBounds.Height;
+        screen = new Rectangle(0, 0,
+            _graphics.PreferredBackBufferWidth,
+            _graphics.PreferredBackBufferHeight);
+
+        ModuleManager.UpdateActiveModule();
     }
 }
