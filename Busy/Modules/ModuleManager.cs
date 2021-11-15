@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 static class ModuleManager
 {
     public static Dictionary<ModuleType, ModuleData> moduleDataCollection = new Dictionary<ModuleType, ModuleData>();
+    public static Dictionary<ModuleType, Action> moduleEnablingCollection = new Dictionary<ModuleType, Action>();
     public static List<ModuleType> moduleTypeCollection = new List<ModuleType>();
     public static ModuleType activeModule;
 
@@ -15,11 +16,27 @@ static class ModuleManager
     public static event ModuleEvent ActiveModuleChange;
     public static event ModuleEvent ResetModules;
 
+    /* Steps to add new module
+     *  1. Add module in ModuleType enum
+     *  2. Add module Enable function in UpdateActiveModule
+     *  3. Add ModuleData in Main.LoadContent
+     *  4. Add LoadContent in Main.LoadContent
+     *  5. Add Initialize in ModuleManager.Initialize
+     */
+
     public static void Initialize()
     {
         moduleTypeCollection = Enum.GetValues(typeof(ModuleType)).Cast<ModuleType>().ToList();
-        activeModule = ModuleType.Lantern;
-        UpdateActiveModule();
+        moduleEnablingCollection = new Dictionary<ModuleType, Action>()
+        {
+            { ModuleType.Rain, () => { Rain.Enable(); } },
+            { ModuleType.Ripple, () => { Ripple.Enable(); } },
+            { ModuleType.Lantern, () => { Star.Enable();Lantern.Enable(); } },
+            { ModuleType.Fireflies, () => { Firefly.Enable(); } },
+            { ModuleType.DVD, () => { DVD.Enable(); } },
+            { ModuleType.Star, () => { Star.Enable(); } },
+        };
+        activeModule = ModuleType.Star;
 
         Main.UpdateEvent += Update;
         ActiveModuleChange += UpdateActiveModule;
@@ -30,7 +47,10 @@ static class ModuleManager
         Lantern.Initialize();
         Firefly.Initialize();
         DVD.Initialize();
+        Star.Initialize();
         #endregion
+
+        UpdateActiveModule();
     }
 
     public static void LoadContent(Dictionary<ModuleType, ModuleData> _moduleData)
@@ -48,7 +68,8 @@ static class ModuleManager
         }
         Main.ModuleUpdateEvent = null;
         Main.ModuleDrawEvent = null;
-        switch(activeModule)
+        moduleEnablingCollection[activeModule].Invoke();
+/*        switch(activeModule)
         {
             default:
                 break;
@@ -67,7 +88,7 @@ static class ModuleManager
             case ModuleType.DVD:
                 DVD.Enable();
                 break;
-        }
+        }*/
     }
 
     public static void Update()
@@ -95,7 +116,8 @@ static class ModuleManager
         Ripple,
         Lantern,
         Fireflies,
-        DVD
+        DVD,
+        Star
     }
 
     public class ModuleData
