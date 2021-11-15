@@ -65,7 +65,8 @@ public class Main : Game
             { ModuleManager.ModuleType.Ripple, new ModuleManager.ModuleData(new Color(20, 20, 60), Content.Load<Texture2D>($"{_logoPath}/ripple")) },
             { ModuleManager.ModuleType.Fireflies, new ModuleManager.ModuleData(new Color(0, 0, 20), Content.Load<Texture2D>($"{_logoPath}/firefly")) },
             { ModuleManager.ModuleType.Lantern, new ModuleManager.ModuleData(new Color(0, 0, 50), Content.Load<Texture2D>($"{_logoPath}/lantern")) },
-            { ModuleManager.ModuleType.DVD, new ModuleManager.ModuleData(new Color(0,0,0),Content.Load<Texture2D>($"{_logoPath}/dvd")) }
+            { ModuleManager.ModuleType.DVD, new ModuleManager.ModuleData(new Color(0, 0, 0), Content.Load<Texture2D>($"{_logoPath}/dvd")) },
+            { ModuleManager.ModuleType.Star, new ModuleManager.ModuleData(new Color(0, 0, 40), Content.Load<Texture2D>($"{_logoPath}/star")) }
         });
         UI.LoadContent(Content.Load<Texture2D>("cursor"), Content.Load<Texture2D>("selectionBar"), Content.Load<Texture2D>("selectionCursor"), Content.Load<Texture2D>("moduleHighlight"), Content.Load<Texture2D>("darkOverlay"), Content.Load<SpriteFont>("font"));
 
@@ -75,6 +76,7 @@ public class Main : Game
         Firefly.LoadContent(Content.Load<Texture2D>("firefly"));
         Lantern.LoadContent(Content.Load<Texture2D>("lantern"));
         DVD.LoadContent(Content.Load<Texture2D>("dvd"));
+        Star.LoadContent(Content.Load<Texture2D>("star"));
         #endregion
     }
 
