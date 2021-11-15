@@ -47,7 +47,6 @@ public class Lantern
         for (int i = 0; i < amount; i++)
         {
             collection.Add(new Lantern(depths[i]));
-            Debug.WriteLine($"{depths[i]}");
         }
     }
 
@@ -98,8 +97,8 @@ public class Lantern
         float direction = MathHelper.ToRadians(rotation);
         rotation = MathHelper.ToRadians(rotation - 30 + 90);
         incrementedVector = new Vector2(
-            MathF.Cos(direction) * 2f * depth,
-            MathF.Sin(direction) * 2f * depth
+            MathF.Cos(direction) * depth,
+            MathF.Sin(direction) * depth
             );
     }
 
