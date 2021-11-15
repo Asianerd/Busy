@@ -50,3 +50,6 @@ D:\GithubRepos\Busy\Busy\obj\Release\netcoreapp3.1\Busy.genruntimeconfig.cache
 D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\dvd.xnb
 D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\Logos\dvd.xnb
 D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\cursor.xnb
+D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\lantern.xnb
+D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\Logos\star.xnb
+D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\star.xnb

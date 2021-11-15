@@ -51,3 +51,5 @@ D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\cursor.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\dvd.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\dvd.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\lantern.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\star.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\star.xnb
