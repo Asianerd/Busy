@@ -35,7 +35,7 @@ class Firefly
 
     static void Start()
     {
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 100; i++)
         {
             collection.Add(new Firefly());
         }
@@ -65,6 +65,7 @@ class Firefly
     static float speed = 1f;
 
     Vector2 position;
+    float depth;
     float direction;    // Degrees : 0 - 360
     float target;       // Degrees : 0 - 360
     float radianDirection; // direction but in radians
@@ -87,6 +88,7 @@ class Firefly
         target = Main.random.Next(0, 360);
         flicker = new GameValue(0, 120, 1, Main.random.Next(0, 100));
         direction = Main.random.Next(0, 360);
+        depth = Main.random.Next(4, 10) / 10f;
     }
 
     void Update()
@@ -98,7 +100,7 @@ class Firefly
         }
 
         float _c = MathF.Sin((float)flicker.Percent() * MathF.PI);
-        color = new Color(_c, _c, _c, _c);
+        color = new Color(_c, _c, _c, _c) * depth;
 
 
         float diff = direction - target;
@@ -139,7 +141,7 @@ class Firefly
 
     void Draw(SpriteBatch spriteBatch)
     {
-        spriteBatch.Draw(sprite, position, null, color, radianDirection, origin, 1f, SpriteEffects.None, 0f);
+        spriteBatch.Draw(sprite, position, null, color, radianDirection, origin, depth, SpriteEffects.None, 0f);
     }
     #endregion
 }
