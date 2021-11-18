@@ -1,0 +1,18 @@
+{
+  "runtimeOptions": {
+    "tfm": "netcoreapp3.1",
+    "includedFrameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "3.1.18"
+      },
+      {
+        "name": "Microsoft.WindowsDesktop.App",
+        "version": "3.1.18"
+      }
+    ],
+    "configProperties": {
+      "System.Runtime.TieredCompilation": false
+    }
+  }
+}

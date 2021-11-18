@@ -13,9 +13,11 @@
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/dvd.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/firefly.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/lantern.png</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/Logos/matrix.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/rain.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/ripple.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/star.png</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/matrix_font.spritefont</File>
     <File>D:/GithubRepos/Busy/Busy/Content/moduleHighlight.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/rain.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/ripple.png</File>
@@ -24,6 +26,8 @@
     <File>D:/GithubRepos/Busy/Busy/Content/star.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

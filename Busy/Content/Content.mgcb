@@ -116,6 +116,18 @@
 /processorParam:TextureFormat=Color
 /build:Logos/lantern.png
 
+#begin Logos/matrix.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Logos/matrix.png
+
 #begin Logos/rain.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -151,6 +163,13 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Logos/star.png
+
+#begin matrix_font.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:matrix_font.spritefont
 
 #begin moduleHighlight.png
 /importer:TextureImporter

@@ -53,3 +53,6 @@ D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\dvd.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\lantern.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\star.xnb
 D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\star.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\matrix.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\Logos\matrix_font.xnb
+D:\GithubRepos\Busy\Busy\bin\Debug\netcoreapp3.1\Content\matrix_font.xnb

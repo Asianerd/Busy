@@ -18,7 +18,7 @@ static class ModuleManager
 
     /* Steps to add new module
      *  1. Add module in ModuleType enum
-     *  2. Add module Enable function in UpdateActiveModule
+     *  2. Add module Enable action in ModuleManager.Initialize
      *  3. Add ModuleData in Main.LoadContent
      *  4. Add LoadContent in Main.LoadContent
      *  5. Add Initialize in ModuleManager.Initialize
@@ -35,8 +35,9 @@ static class ModuleManager
             { ModuleType.Fireflies, () => { Firefly.Enable(); } },
             { ModuleType.DVD, () => { DVD.Enable(); } },
             { ModuleType.Star, () => { Star.Enable(); } },
+            { ModuleType.Matrix, () => { Matrix.Enable(); } },
         };
-        activeModule = ModuleType.Star;
+        activeModule = ModuleType.Matrix;
 
         Main.UpdateEvent += Update;
         ActiveModuleChange += UpdateActiveModule;
@@ -48,6 +49,7 @@ static class ModuleManager
         Firefly.Initialize();
         DVD.Initialize();
         Star.Initialize();
+        Matrix.Initialize();
         #endregion
 
         UpdateActiveModule();
@@ -117,7 +119,8 @@ static class ModuleManager
         Lantern,
         Fireflies,
         DVD,
-        Star
+        Star,
+        Matrix
     }
 
     public class ModuleData
