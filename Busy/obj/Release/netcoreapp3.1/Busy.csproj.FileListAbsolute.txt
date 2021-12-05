@@ -56,3 +56,5 @@ D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\star.xnb
 D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\Logos\matrix.xnb
 D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\Logos\matrix_font.xnb
 D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\matrix_font.xnb
+D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\clock_hand.xnb
+D:\GithubRepos\Busy\Busy\bin\Release\netcoreapp3.1\Content\Logos\clock.xnb

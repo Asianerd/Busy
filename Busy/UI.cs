@@ -14,7 +14,7 @@ static class UI
     static Texture2D selectionCursor;
     static Texture2D selectedModule;
     static Texture2D darkOverlay;
-    static SpriteFont font;
+    public static SpriteFont font;
 
     static GameValue menuValue;
 

@@ -36,8 +36,9 @@ static class ModuleManager
             { ModuleType.DVD, () => { DVD.Enable(); } },
             { ModuleType.Star, () => { Star.Enable(); } },
             { ModuleType.Matrix, () => { Matrix.Enable(); } },
+            { ModuleType.Clock, () => { Clock.Enable(); } },
         };
-        activeModule = ModuleType.Matrix;
+        activeModule = ModuleType.Clock;
 
         Main.UpdateEvent += Update;
         ActiveModuleChange += UpdateActiveModule;
@@ -50,6 +51,7 @@ static class ModuleManager
         DVD.Initialize();
         Star.Initialize();
         Matrix.Initialize();
+        Clock.Initialize();
         #endregion
 
         UpdateActiveModule();
@@ -120,7 +122,8 @@ static class ModuleManager
         Fireflies,
         DVD,
         Star,
-        Matrix
+        Matrix,
+        Clock
     }
 
     public class ModuleData

@@ -4,12 +4,14 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>D:/GithubRepos/Busy/Busy/Content/clock_hand.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/cursor.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/darkOverlay.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/dvd.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/firefly.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/font.spritefont</File>
     <File>D:/GithubRepos/Busy/Busy/Content/lantern.png</File>
+    <File>D:/GithubRepos/Busy/Busy/Content/Logos/clock.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/dvd.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/firefly.png</File>
     <File>D:/GithubRepos/Busy/Busy/Content/Logos/lantern.png</File>
@@ -26,6 +28,8 @@
     <File>D:/GithubRepos/Busy/Busy/Content/star.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

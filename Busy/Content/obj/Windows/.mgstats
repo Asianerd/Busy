@@ -1,10 +1,12 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"D:/GithubRepos/Busy/Busy/Content/clock_hand.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/clock_hand.xnb","TextureProcessor","Texture2DContent",99,1109,0.2649586
 "D:/GithubRepos/Busy/Busy/Content/cursor.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/cursor.xnb","TextureProcessor","Texture2DContent",158,1109,0.1273554
 "D:/GithubRepos/Busy/Busy/Content/darkOverlay.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/darkOverlay.xnb","TextureProcessor","Texture2DContent",2103,1000085,0.0371849
 "D:/GithubRepos/Busy/Busy/Content/dvd.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/dvd.xnb","TextureProcessor","Texture2DContent",2115,409685,0.0345842
 "D:/GithubRepos/Busy/Busy/Content/firefly.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/firefly.xnb","TextureProcessor","Texture2DContent",171,16469,0.0050538
 "D:/GithubRepos/Busy/Busy/Content/font.spritefont","D:/GithubRepos/Busy/Busy/Content/bin/Windows/font.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21538,0.0949548
 "D:/GithubRepos/Busy/Busy/Content/lantern.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/lantern.xnb","TextureProcessor","Texture2DContent",474,16469,0.0075782
+"D:/GithubRepos/Busy/Busy/Content/Logos/clock.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/Logos/clock.xnb","TextureProcessor","Texture2DContent",507,16469,0.0018021
 "D:/GithubRepos/Busy/Busy/Content/Logos/dvd.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/Logos/dvd.xnb","TextureProcessor","Texture2DContent",377,16469,0.0049476
 "D:/GithubRepos/Busy/Busy/Content/Logos/firefly.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/Logos/firefly.xnb","TextureProcessor","Texture2DContent",926,16469,0.0255717
 "D:/GithubRepos/Busy/Busy/Content/Logos/lantern.png","D:/GithubRepos/Busy/Busy/Content/bin/Windows/Logos/lantern.xnb","TextureProcessor","Texture2DContent",474,16469,0.0020659
